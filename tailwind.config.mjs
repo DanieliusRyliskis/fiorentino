@@ -14,10 +14,9 @@ export default {
         },
         extend: {
             colors: {
-                primary: "#B6D6F4",
-                secondary: "#D2F5FF",
-                accent: "#10364D",
-                secondary_backgroud: "#EFFBFF",
+                primary: "#FFDA74",
+                secondary: "#4D4637",
+                accent: "#C0564A",
             }
         },
     },
