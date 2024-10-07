@@ -1,40 +1,100 @@
 ---
 
---- 
+---
+
+<style>
+    .prev-state {
+        height: 0;
+        transition-duration: 1s;
+    }
+    .active {
+        height: 11.5rem;
+    }
+</style>
+
 <header class="sticky top-0">
     <nav class="bg-white flex flex-col flex-wrap lg:flex-row lg:items-center">
-        <div class="flex justify-between items-center px-3 py-6 lg:grow lg:px-0">
+        <div
+            class="flex justify-between items-center px-3 py-6 lg:grow lg:px-0"
+        >
             <a class="lg:pl-6" href="#section1">
                 <!-- Logo -->
                 <picture>
-                    <source srcset="../../public/svg/Logo.svg" media="(min-width: 1024px)">
-                    <img src="../../public/svg/Mobile_logo.svg" alt="vieta logotipas" class="cursor-pointer" id="logo" />
+                    <source
+                        srcset="../../public/svg/Logo.svg"
+                        media="(min-width: 1024px)"
+                    />
+                    <img
+                        src="../../public/svg/Mobile_logo.svg"
+                        alt="vieta logotipas"
+                        class="cursor-pointer"
+                        id="logo"
+                    />
                 </picture>
             </a>
-            <img class="lg:hidden cursor-pointer" src="../../public/svg/Hamburger_menu.svg"
-                alt="Piktograma, kuri atidaro puslapio navigaciją" id="menuIcon" />
+            <img
+                class="lg:hidden cursor-pointer"
+                src="../../public/svg/Hamburger_menu.svg"
+                alt="Piktograma, kuri atidaro puslapio navigaciją"
+                id="menuIcon"
+            />
         </div>
-        <ul class="overflow-hidden prev-state lg:h-fit lg:flex lg:justify-center lg:items-center lg:pr-6"
-            id="linkContainer">
-            <li class="py-0.5 px-2 text-base w-fit lg:px-4 lg:py-4"><a
+        <ul
+            class="overflow-hidden prev-state lg:overflow-visible lg:h-fit lg:flex lg:justify-center lg:items-center lg:pr-6"
+            id="linkContainer"
+        >
+            <li class="py-0.5 px-2 text-base w-fit lg:px-4 lg:py-4">
+                <a
                     class="relative after:absolute after:bg-primary after:h-1 after:w-0 after:left-0 after:bottom-[-0.3rem] lg:after:hover:w-full after:duration-[0.5s] hover:text-slate-600"
-                    href="#section2">Apie mus</a></li>
-            <li class="py-0.5 px-2 text-base w-fit lg:px-4 lg:py-4"><a
+                    href="#section2">Apie mus</a>
+            </li>
+            <li class="py-0.5 px-2 text-base w-fit lg:px-4 lg:py-4">
+                <a
                     class="relative after:absolute after:bg-primary after:h-1 after:w-0 after:left-0 after:bottom-[-0.3rem] lg:after:hover:w-full after:duration-[0.5s] hover:text-slate-600"
-                    href="#section3">Meniu</a></li>
-            <li class="py-0.5 px-2 text-base w-fit lg:px-4 lg:py-4"><a
+                    href="#section3">Meniu</a>
+            </li>
+            <li class="py-0.5 px-2 text-base w-fit lg:px-4 lg:py-4">
+                <a
                     class="relative after:absolute after:bg-primary after:h-1 after:w-0 after:left-0 after:bottom-[-0.3rem] lg:after:hover:w-full after:duration-[0.5s] hover:text-slate-600"
-                    href="#section4">Galerija</a></li>
-            <li class="text-base py-0.5 px-2 w-fit lg:py-0 lg:px-4 flex flex-col lg:flex-row">
+                    href="#section4">Galerija</a>
+            </li>
+            <li
+                class="relative text-base py-0.5 px-2 w-fit lg:py-0 lg:px-4 flex flex-col lg:flex-row"
+            >
                 <span class="cursor-pointer hover:text-slate-600">LT</span>
+                <div
+                    class="flex flex-col justify-center lg:absolute lg:left-1/2 lg:translate-x-[-50%] lg:top-[calc(100%+1rem)] lg:bg-white lg:py-4 lg:px-2 lg:rounded-md"
+                >
+                    <!-- Research About How Routing Works In Astro -->
+                    <a
+                        class="text-center cursor-pointer hover:text-slate-600"
+                        href="../pages/en/">EN</a
+                    >
+                    <a
+                        class="text-center cursor-pointer hover:text-slate-600"
+                        href="../pages/it/">IT</a
+                    >
+                </div>
                 <!-- <span class="hidden lg:inline-block">/</span> -->
                 <!-- <a class="cursor-pointer hover:text-slate-600" href="./en/index.html" -->
                 <!--     id="languageToggle">EN</a> -->
             </li>
             <!-- duration-[0.5s] ease-in-out hover:text-white hover:bg-accent -->
-            <li class="py-0.5 px-2 text-base w-fit lg:px-4 lg:py-4"><a
+            <li class="py-0.5 px-2 text-base w-fit lg:px-4 lg:py-4">
+                <a
                     class="merriweather-light text-base text-white bg-secondary inline-block cursor-pointer py-2 px-6 lg:py-3 lg:px-10"
-                    href="#section5">Kontaktai</a></li>
+                    href="#section5">Kontaktai</a>
+            </li>
         </ul>
     </nav>
 </header>
+
+<script>
+    const menu = document.getElementById("menuIcon");
+    const linkContainer = document.getElementById("linkContainer");
+
+    // Toggles Navbar On Mobile
+    menu.addEventListener("click", () => {
+        linkContainer.classList.toggle("active");
+    });
+</script>
