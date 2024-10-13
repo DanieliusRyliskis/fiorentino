@@ -17,9 +17,11 @@ export default {
                 primary: "#FFDA74",
                 secondary: "#4D4637",
                 accent: "#C0564A",
-            }
+                header: "#632B00",
+            },
         },
     },
     plugins: [],
 };
+
 
