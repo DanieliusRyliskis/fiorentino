@@ -10,9 +10,12 @@ const {name,size, alt} = Astro.props
 <picture>
     <source srcset={`../../public/${name}.webp`} type="image/webp" />
     <img
-        class={`w-full ${size} object-cover`}
+        class={`w-full ${size} object-cover cursor-pointer`}
+        id="image"
         loading="lazy"
         src={`../../public/${name}.jpg`}
         alt={alt}
+        data-name={name}
     />
 </picture>
+
