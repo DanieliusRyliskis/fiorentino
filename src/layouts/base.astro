@@ -9,6 +9,13 @@ title:string;
 const {language, title} = Astro.props
 ---
 
+<style>
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+</style>
+
 <html lang={language}>
 	<head>
 		<meta charset="utf-8" />
@@ -26,3 +33,6 @@ const {language, title} = Astro.props
         <slot />
 	</body>
 </html>
+
+
+

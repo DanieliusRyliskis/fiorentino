@@ -1,5 +1,5 @@
 ---
-import Image from "./image.astro"
+import Image from "./image.astro";
 ---
 
 <h3
@@ -7,25 +7,36 @@ import Image from "./image.astro"
 >
     Galerija
 </h3>
-    <div class="flex gap-4 w-fit mx-auto">
-
-        <div class="flex flex-col gap-4">
-            <Image name="Gallery_1" size="h-[21.563rem]" alt="Nuotrauka 1"></Image>
-            <Image name="Gallery_4" size="h-[21.563rem]" alt="Nuotrauka 4"></Image>
-            <Image name="Gallery_6" size="h-[21.563rem]" alt="Nuotrauka 6"></Image>
-            <Image name="Gallery_9" size="h-[21.563rem]" alt="Nuotrauka 9"></Image>
-        </div>
-
-        <div class="flex flex-col gap-4">
-            <Image name="Gallery_2" size="h-[43.875rem]" alt="Nuotrauka 2"></Image>
-            <Image name="Gallery_7" size="h-[43.875rem]" alt="Nuotrauka 7"></Image>
-        </div>
-
-        <div class="flex flex-col gap-4">
-            <Image name="Gallery_3" size="h-[21.563rem]" alt="Nuotrauka 3"></Image>
-            <Image name="Gallery_5" size="h-[21.563rem]" alt="Nuotrauka 5"></Image>
-            <Image name="Gallery_8" size="h-[21.563rem]" alt="Nuotrauka 8"></Image>
-            <Image name="Gallery_10" size="h-[21.563rem]" alt="Nuotrauka 10"></Image>
-        </div>
+<div class="flex flex-col lg:flex-row gap-4 w-fit lg:w-[95%] 2xl:w-fit mx-auto" id="imageContainer">
+    <div class="flex flex-col w-[90%] mx-auto gap-4">
+        <Image name="Gallery_1" size="lg:h-[21.563rem]" alt="Nuotrauka 1" />
+        <Image name="Gallery_4" size="lg:h-[21.563rem]" alt="Nuotrauka 4" />
+        <Image name="Gallery_6" size="lg:h-[21.563rem]" alt="Nuotrauka 6" />
+        <Image name="Gallery_9" size="lg:h-[21.563rem]" alt="Nuotrauka 9" />
     </div>
-    <!-- Modal Window Should Be Here -->
+
+    <div class="flex flex-col w-[90%] mx-auto gap-4">
+        <Image name="Gallery_2" size="lg:h-[43.875rem]" alt="Nuotrauka 2" />
+        <Image name="Gallery_7" size="lg:h-[43.875rem]" alt="Nuotrauka 7" />
+    </div>
+
+    <div class="flex flex-col w-[90%] mx-auto gap-4">
+        <Image name="Gallery_3" size="lg:h-[21.563rem]" alt="Nuotrauka 3" />
+        <Image name="Gallery_5" size="lg:h-[21.563rem]" alt="Nuotrauka 5" />
+        <Image name="Gallery_8" size="lg:h-[21.563rem]" alt="Nuotrauka 8" />
+        <Image name="Gallery_10" size="lg:h-[21.563rem]" alt="Nuotrauka 10" />
+    </div>
+</div>
+
+<!-- Modal Window -->
+<div
+    class="fixed z-20 top-0 left-0 w-screen h-screen bg-black opacity-50 hidden"
+    id="modal"
+>
+</div>
+<!-- Gallery Interface -->
+<div class="fixed z-50 top-0 left-0" id="interface">
+    <img class="" src="../../public/svg/Close.svg" alt="Piktograma, kuri uždaro galerijos stebėjimą">
+    <img class="hidden" src="../../public/svg/Arrow_left.svg" alt="Piktograma, kuri sugrįžta prie praeitos nuotraukos">
+    <img class="hidden" src="../../public/svg/Arrow_right.svg" alt="Piktograma, kuri pereina prie sekančios nuotraukos">
+</div>
