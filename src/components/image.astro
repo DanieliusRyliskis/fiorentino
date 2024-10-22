@@ -1,12 +1,14 @@
 ---
 interface Props {
-name:string;
-size:string
-alt:string;
+    name: string;
+    size: string;
+    alt: string;
+    index: number;
 }
 
-const {name,size, alt} = Astro.props
+const { name, size, alt, index } = Astro.props;
 ---
+
 <picture>
     <source srcset={`../../public/${name}.webp`} type="image/webp" />
     <img
@@ -15,6 +17,6 @@ const {name,size, alt} = Astro.props
         src={`../../public/${name}.jpg`}
         alt={alt}
         data-name={name}
+        data-index={index}
     />
 </picture>
-

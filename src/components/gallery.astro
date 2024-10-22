@@ -9,34 +9,36 @@ import Image from "./image.astro";
 </h3>
 <div class="flex flex-col lg:flex-row gap-4 w-fit lg:w-[95%] 2xl:w-fit mx-auto" id="imageContainer">
     <div class="flex flex-col w-[90%] mx-auto gap-4">
-        <Image name="Gallery_1" size="lg:h-[21.563rem]" alt="Nuotrauka 1" />
-        <Image name="Gallery_4" size="lg:h-[21.563rem]" alt="Nuotrauka 4" />
-        <Image name="Gallery_6" size="lg:h-[21.563rem]" alt="Nuotrauka 6" />
-        <Image name="Gallery_9" size="lg:h-[21.563rem]" alt="Nuotrauka 9" />
+        <Image name="Gallery_1" size="lg:h-[21.563rem]" alt="Nuotrauka 1" index={1} />
+        <Image name="Gallery_4" size="lg:h-[21.563rem]" alt="Nuotrauka 4" index={4} />
+        <Image name="Gallery_6" size="lg:h-[21.563rem]" alt="Nuotrauka 6" index={6} />
+        <Image name="Gallery_9" size="lg:h-[21.563rem]" alt="Nuotrauka 9" index={9} />
     </div>
 
     <div class="flex flex-col w-[90%] mx-auto gap-4">
-        <Image name="Gallery_2" size="lg:h-[43.875rem]" alt="Nuotrauka 2" />
-        <Image name="Gallery_7" size="lg:h-[43.875rem]" alt="Nuotrauka 7" />
+        <Image name="Gallery_2" size="lg:h-[43.875rem]" alt="Nuotrauka 2" index={2} />
+        <Image name="Gallery_7" size="lg:h-[43.875rem]" alt="Nuotrauka 7" index={7} />
     </div>
 
     <div class="flex flex-col w-[90%] mx-auto gap-4">
-        <Image name="Gallery_3" size="lg:h-[21.563rem]" alt="Nuotrauka 3" />
-        <Image name="Gallery_5" size="lg:h-[21.563rem]" alt="Nuotrauka 5" />
-        <Image name="Gallery_8" size="lg:h-[21.563rem]" alt="Nuotrauka 8" />
-        <Image name="Gallery_10" size="lg:h-[21.563rem]" alt="Nuotrauka 10" />
+        <Image name="Gallery_3" size="lg:h-[21.563rem]" alt="Nuotrauka 3" index={3} />
+        <Image name="Gallery_5" size="lg:h-[21.563rem]" alt="Nuotrauka 5" index={5} />
+        <Image name="Gallery_8" size="lg:h-[21.563rem]" alt="Nuotrauka 8" index={8} />
+        <Image name="Gallery_10" size="lg:h-[21.563rem]" alt="Nuotrauka 10" index={10} />
     </div>
 </div>
 
 <!-- Modal Window -->
 <div
-    class="fixed z-20 top-0 left-0 w-screen h-screen bg-black opacity-50 hidden"
+    class="hidden fixed z-20 top-0 left-0 w-screen h-screen bg-black opacity-50"
     id="modal"
 >
 </div>
 <!-- Gallery Interface -->
-<div class="fixed z-50 top-0 left-0" id="interface">
-    <img class="" src="../../public/svg/Close.svg" alt="Piktograma, kuri uždaro galerijos stebėjimą">
-    <img class="hidden" src="../../public/svg/Arrow_left.svg" alt="Piktograma, kuri sugrįžta prie praeitos nuotraukos">
-    <img class="hidden" src="../../public/svg/Arrow_right.svg" alt="Piktograma, kuri pereina prie sekančios nuotraukos">
+<!-- Maybe Use Grid Next Time -->
+<div class="hidden fixed z-50 w-screen h-screen top-0 left-0" id="interface">
+    <img class="absolute top-[2%] right-[2%]" src="../../public/svg/Close.svg" id="closeIcon" alt="Piktograma, kuri uždaro galerijos stebėjimą">
+    <img class="absolute top-1/2 translate-y-[-50%] left-[5%] hidden lg:inline-block" src="../../public/svg/Arrow_left.svg" id="arrowLeft" alt="Piktograma, kuri sugrįžta prie praeitos nuotraukos">
+    <img class="absolute top-1/2 translate-y-[-50%] right-[5%] hidden lg:inline-block" src="../../public/svg/Arrow_right.svg" id="arrowRight" alt="Piktograma, kuri pereina prie sekančios nuotraukos">
+    <div class="w-full h-full" id="background"></div>
 </div>
