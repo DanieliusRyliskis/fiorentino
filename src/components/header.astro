@@ -11,12 +11,12 @@
                 <!-- Logo -->
                 <picture>
                     <source
-                        srcset="../../public/svg/Logo.svg"
+                        srcset="../../public/svg/Logo_black.svg"
                         media="(min-width: 1024px)"
                     />
                     <img
-                        src="../../public/svg/Mobile_logo.svg"
-                        alt="vieta logotipas"
+                        src="../../public/svg/Mobile_logo_black.svg"
+                        alt="fiorentino logotipas"
                         class="cursor-pointer"
                         id="logo"
                     />
@@ -84,15 +84,15 @@
 </header>
 
 <script>
-    const menu = document.getElementById("menuIcon");
+    const menu = document.getElementById('menuIcon');
     let menuOpen = false;
-    const linkContainer = document.getElementById("linkContainer");
-    const linkContainerHeight = linkContainer.scrollHeight + 10 + "px";
+    const linkContainer = document.getElementById('linkContainer');
+    const linkContainerHeight = linkContainer.scrollHeight + 10 + 'px';
 
     // Toggles Navbar On Mobile
-    menu.addEventListener("click", () => {
+    menu.addEventListener('click', () => {
         if (menuOpen) {
-            linkContainer.style.height = "0px";
+            linkContainer.style.height = '0px';
         } else if (!menuOpen) {
             linkContainer.style.height = linkContainerHeight;
         }
