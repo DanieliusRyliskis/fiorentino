@@ -94,6 +94,7 @@ const openModal = function (e) {
     previewImage.src = `../../public/${data}_preview.jpg`;
     previewImage.id = 'previewImage';
     previewImage.alt = `${data}`;
+    picture.loading = 'lazy'
     previewImage.classList.add(
         'absolute',
         'max-w-[85%]',

@@ -1,5 +1,6 @@
 ---
-
+import srcImage from "../assets/Hero_image.jpg"
+import { Image } from "astro:assets"
 ---
 <section class="lg:grid lg:grid-cols-12 lg:justify-center lg:items-center " id="section1">
     <div class="lg:col-[1/8] flex justify-center">
@@ -13,9 +14,12 @@
                 href="#section5" id="callToAction">Susisiekime</a>
         </div>
     </div>
-    <picture class="lg:col-[8/13]">
-        <source srcset="./Hero_image.webp" type="image/webp">
-        <img class="w-full lg:h-[85vh] lg:object-cover" loading="lazy"
-        src="./Hero_image.jpg" alt="restorano nuotrauka">
-    </picture>
+    <!-- 145 B -->
+    <!-- 40 B -->
+    <!-- <picture class="lg:col-[8/13]"> -->
+    <!--     <source srcset="../../public/Hero_image.webp" type="image/webp"> -->
+    <!--     <img class="w-full lg:h-[85vh] lg:object-cover" loading="lazy" -->
+    <!--         src="../../public/Hero_image.jpg" alt="restorano nuotrauka"> -->
+    <!-- </picture> -->
+    <Image src={srcImage} alt="" class="lg:col-[8/13] w-full lg:h-[85vh]"/>
 </section>
