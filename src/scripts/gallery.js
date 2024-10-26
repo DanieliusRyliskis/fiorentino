@@ -73,7 +73,7 @@ const closeInterface = function () {
     background.removeEventListener('click', closeInterface);
 };
 
-
+// Add Lazy Loading
 const openModal = function (e) {
     // Add Modal Window and Interface
     body.classList.add('stop-scrolling');
